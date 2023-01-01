@@ -1,0 +1,64 @@
+/* pages/login/login.wxss */
+.wxUserInfo {  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+}   
+.personality{
+  text-align: center;
+  font-size: large;
+}
+.title{
+  text-align:center;
+  font-size:xx-large;
+}
+.tip{
+  width: 450rpx;
+  margin-top: 20rpx;
+}
+ 
+.input{
+    padding-left: 10rpx;
+    height: 80rpx;
+}
+ 
+.inputView{
+    border:  1rpx solid #66c5ab;   /*边界：大小1rpx, 为固体，为绿色*/
+    border-radius: 30rpx;         /*边界角的弧度*/
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 15rpx;
+}
+ 
+.buttonForgetPassword{
+    color: #66c5ab;
+    width:30%; 
+    margin-right: 5%;
+    margin-left: 65%;
+    margin-top: 5rpx;
+    background: none;
+}
+ 
+.buttonForgetPassword::after{
+    border: none;               /*button去边框*/
+}
+ 
+.buttonLoginView{
+    border-radius: 30px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10rpx;
+}
+ 
+.buttonLogin{
+    background: #66c5ab;
+    color: white;
+}
+ 
+.buttonLogin::after{
+    border: none;
+}
+.login{
+  border:solid #edfffa;
+}
