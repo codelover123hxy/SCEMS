@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationStyle":"custom",
+
+  "navigationBarTitleText": "登录",
+  "navigationBarTextStyle": "black"
 }

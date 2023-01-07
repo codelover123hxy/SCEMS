@@ -1,31 +1,30 @@
 <!--pages/login/login.wxml-->
 <view class="container">
+  <view class="login">  
+    <!-- <view class="title">登录</view> -->
+    <rich-text class="personality">请选择您的身份 </rich-text>
+    <view class="radioView">
+              <!-- 核选项的单选框 -->
+      <radio-group bindchange="radioChange" data-index="{{index}}">
+        <radio value="学生">学生</radio>　　<!--前面有两个中文全角空格-->
+        <radio value="辅导员">辅导员</radio>
+      </radio-group>
+    </view>
+    <!--登陆-->
+    <view class="inputView">
+      <input name='input_user_name' class='input' type='number' value="{{username}}" placeholder='请输入账号' bindinput="inputUsername" placeholder-style='color:rgb(184, 184, 184)'/>
+    </view>
+    <view class="inputView" style="margin-top:5%">
+      <input name='input_user_password' class='input' type='number' value="{{password}}" placeholder='请输入密码' bindinput="inputPwd" placeholder-style='color:rgb(184, 184, 184)'/>
+    </view>
   
-<view class="login">  
-  <view class="title">登录</view>
-  <rich-text class="personality">请选择您的身份 </rich-text>
-  <view class="radioView">
-            <!-- 核选项的单选框 -->
-    <radio-group bindchange="radioChange" data-index="{{index}}">
-      <radio value="学生">学生</radio>　　<!--前面有两个中文全角空格-->
-      <radio value="辅导员">辅导员</radio>
-    </radio-group>
-  </view>
-   <!--登陆-->
-   <view class="inputView">
-     <input name='input_user_name' class='input' type='number' placeholder='请输入账号' placeholder-style='color: #e0e0e0'/>
-   </view>
-   <view class="inputView" style="margin-top:5%">
-     <input name='input_user_password' class='input' type='number' placeholder='请输入密码' placeholder-style='color: #e0e0e0'/>
-   </view>
- 
-  <button class='buttonForgetPassword' >忘记密码</button>
-  <view class="buttonLoginView">
-    <button class='buttonLogin' bindtap='login' >登 陆</button>
-  </view>
-  <view class="tip">
-    温馨提示：
-    学生账号为学号，初始密码为"zjut+学号后六位"。
-  </view>
+    <button class='buttonForgetPassword' >忘记密码</button>
+    <view class="buttonLoginView">
+      <button class='buttonLogin' bindtap='login' >登 陆</button>
+    </view>
+    <view class="tip">
+      温馨提示：
+      学生账号为学号，初始密码为"zjut+学号后六位"。
+    </view>
   </view>  
 </view>
