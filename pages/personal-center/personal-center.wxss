@@ -1,1 +1,34 @@
 /* pages/personal-center/personal-center.wxss */
+
+.container{
+  position:fixed;
+  background-color: azure;
+  height: 100%;
+  width: 100%;
+}
+.userProfile{
+  position: absolute;
+  top:100rpx;
+  background-color: azure;
+}
+.alter{
+  position: absolute;
+  bottom:500rpx;
+}
+.function{
+  width: 500rpx;
+  height:90rpx;
+  font-family:'思源黑体';
+}
+
+.info{
+  position: relative;
+  width: 400rpx;
+}
+
+.info:nth-child(1){
+  display: inline-block;
+  font-size: larger;
+  position: absolute;
+  right: 0;
+}

@@ -1,11 +1,15 @@
 {
   "pages":[
-    "pages/index/index",
     "pages/login/login",
+    "pages/index/index",
     "pages/topic-square/topic-square",
     "pages/personal-center/personal-center",
     "pages/applicant/applicant",
-    "pages/manager/manager"
+    "pages/manager/manager",
+    "pages/query-score/query-score",
+    "pages/change-password/change-password",
+    "pages/details/details",
+    "pages/suggestion-box/suggestion-box"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -22,19 +26,19 @@
       {
         "pagePath": "pages/index/index",
         "iconPath": "image/index.png",
-        "selectedIconPath":"image/index.png",
+        "selectedIconPath":"image/index-clicked.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/topic-square/topic-square",
         "iconPath": "image/topic-square.png",
-        "selectedIconPath":"image/topic-square.png",
+        "selectedIconPath":"image/topic-square-clicked.png",
         "text": "话题广场"
       },
       {
         "pagePath": "pages/personal-center/personal-center",
         "iconPath": "image/personal-center.png",
-        "selectedIconPath":"image/personal-center.png",
+        "selectedIconPath":"image/personal-center-clicked.png",
         "text":"个人中心"
       }
     ]

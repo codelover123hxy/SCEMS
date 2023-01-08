@@ -14,6 +14,22 @@ const formatNumber = n => {
   return n[1] ? n : `0${n}`
 }
 
+function getFontFamily() {
+  wx.loadFontFace({
+    family: 'webfont',
+    source: 'url("//d.sicq.org/assets/src/SourceHanSansCN-Normal.ttf")',//这个文件放到您的服务器根目录下
+    success: function (res) {
+      console.log(res.status) // loaded 
+    },
+    fail: function (res) {
+      console.log(res.status) // error 
+    },
+    complete: function (res) {
+      console.log(res.status);
+    }
+  });
+}
+
 module.exports = {
   formatTime
 }

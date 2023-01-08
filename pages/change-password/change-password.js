@@ -1,18 +1,46 @@
-// pages/login/login.js
+// pages/change-password/change-password.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    newPwd:'',
+    oldPwd:''
   },
+  changePwd(){
+    wx.request({
+      url: 'url',
+      success:(res)=>{
 
+      },
+      fail:()=>{
+        wx.showToast({
+          title: '修改失败',
+          icon:'error'
+        })
+      },
+      complete:()=>{
+
+      }
+
+    })
+  },
+  inputNewPwd(e){
+    this.setData({
+      newPwd:e.detail.value
+    })
+  },
+  inputOldPwd(e){
+    this.setData({
+      oldPwd:e.detail.value
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-   
+
   },
 
   /**
@@ -40,7 +68,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload() {
-   
+
   },
 
   /**

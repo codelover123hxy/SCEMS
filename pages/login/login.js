@@ -1,4 +1,5 @@
 // pages/login/login.js
+
 Page({
 
   /**
@@ -8,12 +9,23 @@ Page({
     identity:'',   // 标注学生或辅导员
     username:'',
     password:'',
+    userInfo:'',
     student:{
       grade:'',
       profession:''
     }
   },
-
+  getUserInfo:function (){
+    wx.getUserProfile({
+      desc: '用于完善个人信息',
+      success:(res)=>{
+        console.log(res.userInfo);
+        this.setData({
+          userInfo:res.userInfo
+        })
+      }
+    })
+  },
   login(){
     let username=this.data.username;
     let pwd=this.data.password;
@@ -27,13 +39,14 @@ Page({
     }
     else if(identity=="学生") {
       let obj={};
-
+      const app = getApp();
       obj.grade=username.substring(0,4);
-      console.log(obj.grade);
       obj.profession="计算机";
       this.setData({
         student:obj
       })
+      app.globalData.student=obj;
+      console.log(app.globalData.student)
       wx.request({
         url: 'url',
         method:'POST',
@@ -41,8 +54,9 @@ Page({
 
         },
         complete:()=>{
-          wx.navigateBack({
-            delta: 0,
+          this.getUserInfo();
+          wx.switchTab({
+            url: '../index/index',
           })
         }
       })
@@ -55,13 +69,15 @@ Page({
 
         },
         complete:()=>{
-          wx.navigateBack({
-            delta: 0,
+          this.getUserInfo();
+          wx.switchTab({
+            url: '../index/index',
           })
         }
       })
     }
   },
+
 //  双向绑定
   inputUsername(e){
     var name=e.detail.value;

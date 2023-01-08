@@ -1,1 +1,9 @@
 <!--index.wxml-->
+<view class="container">
+  <view class="title">学生综测管理系统</view>
+  <navigator hover-class="none" url="../applicant/applicant"><view class="apply">开始申报</view></navigator>
+  <navigator hover-class="none" url="../query-score/query-score"><view class="query">查询分数</view></navigator>
+  <view><image src="../../image/flower.png" mode="widthFix" style="width: 100rpx;"></image></view>
+  <view><image src="../../image/leaf.png" mode="widthFix" style="width: 100rpx;"></image></view>
+  <view><image src="../../image/ruler.png" mode="widthFix" style="width: 200rpx;"></image></view>
+</view>

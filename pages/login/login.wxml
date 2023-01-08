@@ -15,7 +15,7 @@
       <input name='input_user_name' class='input' type='number' value="{{username}}" placeholder='请输入账号' bindinput="inputUsername" placeholder-style='color:rgb(184, 184, 184)'/>
     </view>
     <view class="inputView" style="margin-top:5%">
-      <input name='input_user_password' class='input' type='number' value="{{password}}" placeholder='请输入密码' bindinput="inputPwd" placeholder-style='color:rgb(184, 184, 184)'/>
+      <input name='input_user_password' class='input' type="password" value="{{password}}" placeholder='请输入密码' bindinput="inputPwd" placeholder-style='color:rgb(184, 184, 184)'/>
     </view>
   
     <button class='buttonForgetPassword' >忘记密码</button>

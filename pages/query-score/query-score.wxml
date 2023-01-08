@@ -1,0 +1,4 @@
+<!--pages/query-score/query-score.wxml-->
+<view class="container">
+  你的综测分数为{{score}}
+</view>

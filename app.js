@@ -1,6 +1,10 @@
 // app.js
+
+const util = require('./utils/util.js');
 App({
   onLaunch() {
+    
+    // util.getFontFamily();
     // 展示本地存储能力
     const logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -14,6 +18,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    student:''
   }
 })

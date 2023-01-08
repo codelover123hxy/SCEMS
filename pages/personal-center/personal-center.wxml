@@ -1,2 +1,22 @@
 <!--pages/personal-center/personal-center.wxml-->
-<text>pages/personal-center/personal-center.wxml</text>
+<view class="container">
+  <view class="userProfile">
+    <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar" style="background-color: azure;">
+      <image class="avatar" src="{{avatarUrl}}" mode="heightFix" style="height: 200rpx;border-radius: 100rpx;"></image>
+    </button> 
+    <view><input type="nickname" class="weui-input" style="text-align: center;" placeholder="请输入昵称"/></view>
+    <view class="info" >
+      <view ><text>年级：{{grade}}</text></view>
+      <view ><text>学院：{{college}}</text></view>
+    </view>
+  </view>
+  <view class="alter" >
+    <block>
+      <view bindtap="navigate" class="function" wx:for="{{functionList}}" data-index="{{index}}">{{item}} 
+        <view style="display: inline;position:absolute;right:0">
+          <image  mode="heightFix" style="height:50rpx"  src="../../image/arrow.png" alt=""/> 
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
